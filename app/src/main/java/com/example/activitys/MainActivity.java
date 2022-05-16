@@ -1,16 +1,12 @@
 package com.example.activitys;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.activitys.intefaces.CategoriesApi;
@@ -26,8 +22,6 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
-    private EditText et1;
-    TextView textViewCategories;
     LinearLayout layout;
     List<Button> buscar = new ArrayList<>();
 
@@ -75,7 +69,9 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                System.out.println(button.getText().toString());
+                Intent siguiente = new Intent(getApplicationContext(),SegundoActivity.class);
+                siguiente.putExtra("category",button.getText().toString());
+                startActivity(siguiente);
             }
         });
     }
@@ -83,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void siguiente(View view){
         Intent siguiente = new Intent(this,SegundoActivity.class);
-        siguiente.putExtra("dato",et1.getText().toString());
+        //siguiente.putExtra("dato",et1.getText().toString());
         startActivity(siguiente);
     }
 }
