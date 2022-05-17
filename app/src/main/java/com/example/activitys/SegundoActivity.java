@@ -3,7 +3,6 @@ package com.example.activitys;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.Canvas;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,7 +15,6 @@ import com.example.activitys.intefaces.CategoriesApi;
 import com.example.activitys.models.User;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -32,12 +30,13 @@ public class SegundoActivity extends AppCompatActivity {
     private TextView titulo;
     private TextView textView;
     private ImageView imageView;
+    private String dato;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_segundo);
-        String dato = getIntent().getStringExtra("category");
+        dato = getIntent().getStringExtra("category");
         System.out.println(dato);
         titulo = findViewById(R.id.textView6);
         textView = findViewById(R.id.textView2);
@@ -72,6 +71,7 @@ public class SegundoActivity extends AppCompatActivity {
                         for (User u : users){
                             Button button = new Button(getApplicationContext());
                             button.setText(u.getUsername());
+                            listenerButton(button);
                             buttons.add(button);
                             layout = findViewById(R.id.ofertantes);
                             layout.addView(button);
@@ -96,6 +96,18 @@ public class SegundoActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void listenerButton(Button button){
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent siguiente = new Intent(getApplicationContext(),TerceraActividad.class);
+                siguiente.putExtra("ofertante",button.getText().toString());
+                siguiente.putExtra("servicio",dato);
+                startActivity(siguiente);
+            }
+        });
     }
 
 
