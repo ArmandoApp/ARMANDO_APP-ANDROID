@@ -115,6 +115,10 @@ public class SegundoActivity extends AppCompatActivity {
         Intent atras = new Intent(this,MainActivity.class);
         startActivity(atras);
     }
+    public void home(View view){
+        Intent servicio = new Intent(this, MenuActivity.class);
+        startActivity(servicio);
+    }
 
 
 
