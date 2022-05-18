@@ -19,6 +19,8 @@
         <activity android:name=".SegundoActivity"></activity>
         <activity android:name=".PaymentActivity"></activity>
         <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MenuActivity"/>
+        <activity android:name=".PaymentActivity"/>
         <activity
             android:name=".ActivitySplash"
             android:exported="true">

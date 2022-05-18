@@ -18,6 +18,8 @@ public class LoginActivity extends AppCompatActivity {
         et2= (EditText) findViewById(R.id.passwd);
     }
     public void ingresar(View view){
-
+        Intent ingresar = new Intent(LoginActivity.this, MenuActivity.class);
+        ingresar.putExtra("dato",et1.getText().toString());
+        startActivity(ingresar);
     }
 }

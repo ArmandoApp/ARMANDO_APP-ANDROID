@@ -82,4 +82,8 @@ public class MainActivity extends AppCompatActivity {
         //siguiente.putExtra("dato",et1.getText().toString());
         startActivity(siguiente);
     }
+    public void home(View view){
+        Intent servicio = new Intent(this, MenuActivity.class);
+        startActivity(servicio);
+    }
 }
