@@ -42,7 +42,7 @@ public class TerceraActividad extends AppCompatActivity {
         siguiente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent siguiente = new Intent(getApplicationContext(),TerceraActividad.class);
+                Intent siguiente = new Intent(getApplicationContext(),PaymentActivity.class);
                 siguiente.putExtra("category",servicio);
                 startActivity(siguiente);
             }

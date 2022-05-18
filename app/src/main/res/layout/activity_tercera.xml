@@ -69,7 +69,8 @@
         android:layout_marginBottom="16dp"
         android:text="Atras"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/siguiente"
@@ -80,7 +81,8 @@
         android:layout_marginBottom="16dp"
         android:text="Siguiente"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/atras" />
+        app:layout_constraintStart_toEndOf="@+id/atras"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <LinearLayout
         android:id="@+id/ofertantes"

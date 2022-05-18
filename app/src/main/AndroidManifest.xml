@@ -14,6 +14,7 @@
         android:usesCleartextTraffic="true">
         <activity android:name=".TerceraActividad"></activity>
         <activity android:name=".SegundoActivity"></activity>
+        <activity android:name=".PaymentActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
