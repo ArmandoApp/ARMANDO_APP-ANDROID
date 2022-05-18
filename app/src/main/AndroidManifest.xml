@@ -12,9 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/AppTheme.Login" />
         <activity android:name=".TerceraActividad"></activity>
         <activity android:name=".SegundoActivity"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"></activity>
+        <activity
+            android:name=".ActivitySplash"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
