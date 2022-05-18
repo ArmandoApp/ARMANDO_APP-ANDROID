@@ -9,17 +9,15 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
     private EditText et1;
-
+    private EditText et2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         et1= (EditText) findViewById(R.id.nombre);
+        et2= (EditText) findViewById(R.id.passwd);
     }
-
-    public void siguiente(View view){
-        Intent siguiente = new Intent(this,SegundoActivity.class);
-        siguiente.putExtra("dato",et1.getText().toString());
-        startActivity(siguiente);
+    public void ingresar(View view){
+        
     }
 }
