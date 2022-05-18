@@ -13,7 +13,7 @@ public class PaymentActivity extends AppCompatActivity {
     }
 
     public void next(View view){
-        Intent next = new Intent(this,MainActivity.class);
+        Intent next = new Intent(this,MenuActivity.class);
         startActivity(next);
     }
 }
