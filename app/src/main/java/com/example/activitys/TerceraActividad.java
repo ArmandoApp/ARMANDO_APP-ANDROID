@@ -25,7 +25,7 @@ public class TerceraActividad extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tercera);
         String ofertante = getIntent().getStringExtra("ofertante");
-        String servicio = getIntent().getStringExtra("servicio");
+        final String servicio = getIntent().getStringExtra("servicio");
         name = findViewById(R.id.Name);
         category = findViewById(R.id.textView6);
         resena = findViewById(R.id.resena);
@@ -33,7 +33,7 @@ public class TerceraActividad extends AppCompatActivity {
         precioNum = findViewById(R.id.textView10);
         name.setText(ofertante);
         category.setText(servicio);
-        resena.setText("Trabaja mal, realizo trabajos que no eran, cuando llegue a ver su producto final no era el que yo quería, no lo recomiendo");
+        resena.setText("Trabaja mal, realizo trit abajos que no eran, cuando llegue a ver su producto final no era el que yo quería, no lo recomiendo");
         respuestaNum.setText("5 minutos");
         precioNum.setText("50.000 COP/hora");
         siguiente = findViewById(R.id.siguiente);
